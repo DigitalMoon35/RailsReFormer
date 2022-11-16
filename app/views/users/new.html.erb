@@ -1,1 +1,28 @@
-<h1>This a new view baby!</h1>
+<%# <form action="/users" method="POST">
+    <label for="">
+        Username:
+        <input type="text" name="user[name]">
+    </label>
+    <label for="">
+        Password:
+        <input type="password" name="user[password]">
+    </label>
+    <label for="">
+        Email:
+        <input type="text" name="user[email]">
+    </label>
+        <input type="submit" value="Create User">
+</form> %>
+
+
+
+
+<%= form_with model: @user do |form| %>
+    <%= form.label "Username" %>
+    <%= form.text_field :name %>
+    <%= form.label "Email" %>
+    <%= form.text_field :email %>
+    <%= form.label "Paassword" %>
+    <%= form.text_field :password %>
+    <%= form.submit "Create" %>
+<%end%>
